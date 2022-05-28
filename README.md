@@ -50,5 +50,6 @@ If I had more time, I could:
 * dive deeper on the data and create more visualisation
 * have added user Interaction
 * added more react hooks 
+* avoided static datas
 
 Had to take more time on to visualizing the data and creating them
