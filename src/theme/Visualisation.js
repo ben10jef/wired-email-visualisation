@@ -21,7 +21,7 @@ import DAY_TIME_SERIES from '../mock/dayTimeSeries';
 const Visualisation = () => {
     const [timeline, setTimeline] = React.useState('');
 
-    const handleChange = (event: SelectChangeEvent) => {
+    const handleChange = (event) => {
         setTimeline(event.target.value);
     };
 
@@ -31,7 +31,7 @@ const Visualisation = () => {
                 <Container maxWidth="xl">
                     <Typography variant="h4" sx={{mt: 8, mb: 5, fontWeight: 700, fontSize: '1.5rem'}}>
                         Hi, Welcome back
-                        <FormControl sx={{ m: 1, minWidth: 80, float: 'right' }}>
+                        <FormControl sx={{m: 1, minWidth: 80, float: 'right'}}>
                             <InputLabel id="demo-simple-select-autowidth-label">Daily</InputLabel>
                             <Select
                                 labelId="demo-simple-select-autowidth-label"
@@ -53,29 +53,35 @@ const Visualisation = () => {
 
                     <Grid container spacing={3}>
                         <Grid item xs={12} sm={12} md={6}>
-                            <StatusCard title={'Best time to sent mail'} count={'Night'} color={'#061752'} bgColor={'#d1e9fc'} icon={<ContactMailIcon fontSize="large"/>}/>
+                            <StatusCard title={'Best time to sent mail'} count={'Night'} color={'#061752'}
+                                        bgColor={'#d1e9fc'} icon={<ContactMailIcon fontSize="large"/>}/>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6}>
-                            <StatusCard title={"Best day to sent mail"} count={'Saturday'} color={'#04297a'} bgColor={'#d0f2ff'} icon={<MarkEmailReadIcon  fontSize="large"/>} />
+                            <StatusCard title={"Best day to sent mail"} count={'Saturday'} color={'#04297a'}
+                                        bgColor={'#d0f2ff'} icon={<MarkEmailReadIcon fontSize="large"/>}/>
                         </Grid>
 
                         <Grid item xs={12} sm={6} md={3}>
-                            <StatusCard title={'Total Email'} count={'125'} color={'#061752'} bgColor={'#d1e9fc'} icon={<ContactMailIcon fontSize="large"/>} />
+                            <StatusCard title={'Total Email'} count={'125'} color={'#061752'} bgColor={'#d1e9fc'}
+                                        icon={<ContactMailIcon fontSize="large"/>}/>
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                            <StatusCard title={"Emails Success"} count={'104'} color={'#04297a'} bgColor={'#d0f2ff'} icon={<MarkEmailReadIcon  fontSize="large"/>} />
+                            <StatusCard title={"Emails Success"} count={'104'} color={'#04297a'} bgColor={'#d0f2ff'}
+                                        icon={<MarkEmailReadIcon fontSize="large"/>}/>
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                            <StatusCard title={"Emails Pending"} count={'20'} color={'#7a4f01'} bgColor={'#fff7cd'} icon={<ReportGmailerrorredIcon  fontSize="large"/>} />
+                            <StatusCard title={"Emails Pending"} count={'20'} color={'#7a4f01'} bgColor={'#fff7cd'}
+                                        icon={<ReportGmailerrorredIcon fontSize="large"/>}/>
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
-                            <StatusCard title={'Emails Failed'} count={"1"} color={'#7a0c2e'} bgColor={'#ffe7d9'} icon={<CancelScheduleSendIcon  fontSize="large"/>} />
+                            <StatusCard title={'Emails Failed'} count={"1"} color={'#7a0c2e'} bgColor={'#ffe7d9'}
+                                        icon={<CancelScheduleSendIcon fontSize="large"/>}/>
                         </Grid>
 
                         <Grid item xs={12} md={6} lg={12}>
                             <ChartWrapper title={'Email highlight [Days vs Time]'} Component={
                                 <HeatMapChart data={DAY_TIME_SERIES}/>}
-                                />
+                            />
                         </Grid>
 
                         <Grid item xs={12} md={6} lg={8}>
@@ -115,7 +121,7 @@ const Visualisation = () => {
                                           ]}/>}/>
                         </Grid>
                         <Grid item xs={12} md={12} lg={12}>
-                            <Users />
+                            <Users/>
                         </Grid>
                     </Grid>
                 </Container>

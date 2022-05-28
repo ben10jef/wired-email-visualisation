@@ -7,7 +7,8 @@ import {
     TableBody,
     TableCell,
     TableContainer,
-    TableHead, TablePagination,
+    TableHead,
+    TablePagination,
     TableRow,
     TableSortLabel
 } from "@mui/material";
@@ -16,18 +17,18 @@ import Avatar from '@mui/material/Avatar';
 import Typography from "@mui/material/Typography";
 import {Label} from "@mui/icons-material";
 import {filter} from "lodash";
-import USERLIST from "../mock/user";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
+import USERLIST from "../mock/user";
 
 const TABLE_HEAD = [
-    { id: '', },
-    { id: 'name', label: 'NAME', alignRight: false },
-    { id: 'company', label: 'COMPANY', alignRight: false },
-    { id: 'type', label: 'TYPE', alignRight: false },
-    { id: 'subscribe', label: 'SUSCRIBE', alignRight: false },
-    { id: 'isVerified', label: 'VERIFIED', alignRight: false },
-    { id: '' },
+    {id: '',},
+    {id: 'name', label: 'NAME', alignRight: false},
+    {id: 'company', label: 'COMPANY', alignRight: false},
+    {id: 'type', label: 'TYPE', alignRight: false},
+    {id: 'subscribe', label: 'SUSCRIBE', alignRight: false},
+    {id: 'isVerified', label: 'VERIFIED', alignRight: false},
+    {id: ''},
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -71,7 +72,7 @@ const visuallyHidden = {
     clip: 'rect(0 0 0 0)',
 };
 
-const   Users = () => {
+const Users = () => {
     const [page, setPage] = useState(0);
 
     const [order, setOrder] = useState('asc');
@@ -125,7 +126,7 @@ const   Users = () => {
     return (
         <div>
             <Card>
-                <TableContainer sx={{ minWidth: 800 }}>
+                <TableContainer sx={{minWidth: 800}}>
                     <Table>
                         <TableHead>
                             <TableRow>
@@ -143,7 +144,8 @@ const   Users = () => {
                                         >
                                             {headCell.label}
                                             {orderBy === headCell.id ? (
-                                                <Box sx={{ ...visuallyHidden }}>{order === 'desc' ? 'sorted descending' : 'sorted ascending'}</Box>
+                                                <Box
+                                                    sx={{...visuallyHidden}}>{order === 'desc' ? 'sorted descending' : 'sorted ascending'}</Box>
                                             ) : null}
                                         </TableSortLabel>
                                     </TableCell>
@@ -153,7 +155,7 @@ const   Users = () => {
                         <TableBody>
                             {filteredUsers.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                                 debugger
-                                const { id, name, type, subscribe, company, avatarUrl, isVerified } = row;
+                                const {id, name, type, subscribe, company, avatarUrl, isVerified} = row;
                                 const isItemSelected = selected.indexOf(name) !== -1;
 
                                 return (
@@ -166,11 +168,12 @@ const   Users = () => {
                                         aria-checked={isItemSelected}
                                     >
                                         <TableCell padding="checkbox">
-                                            <Checkbox checked={isItemSelected} onChange={(event) => handleClick(event, name)} />
+                                            <Checkbox checked={isItemSelected}
+                                                      onChange={(event) => handleClick(event, name)}/>
                                         </TableCell>
                                         <TableCell component="th" scope="row" padding="none">
                                             <Stack direction="row" alignItems="center" spacing={2}>
-                                                <Avatar alt={name} src={avatarUrl} />
+                                                <Avatar alt={name} src={avatarUrl}/>
                                                 <Typography variant="subtitle2" noWrap>
                                                     {name}
                                                 </Typography>
@@ -180,11 +183,12 @@ const   Users = () => {
                                         <TableCell align="left">{type}</TableCell>
                                         <TableCell align="left">{isVerified ? 'Yes' : 'No'}</TableCell>
                                         <TableCell align="left">
-                                            <Label variant="ghost" color={(subscribe === false && 'error') || 'success'}>
+                                            <Label variant="ghost"
+                                                   color={(subscribe === false && 'error') || 'success'}>
                                             </Label>
                                         </TableCell>
                                         <TableCell align="right">
-                                            <Button variant="contained" endIcon={<SendIcon/>} >
+                                            <Button variant="contained" endIcon={<SendIcon/>}>
                                                 SEND
                                             </Button>
                                         </TableCell>
@@ -192,8 +196,8 @@ const   Users = () => {
                                 );
                             })}
                             {emptyRows > 0 && (
-                                <TableRow style={{ height: 53 * emptyRows }}>
-                                    <TableCell colSpan={6} />
+                                <TableRow style={{height: 53 * emptyRows}}>
+                                    <TableCell colSpan={6}/>
                                 </TableRow>
                             )}
                         </TableBody>

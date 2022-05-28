@@ -1,7 +1,7 @@
 import React from 'react';
-import {alpha, styled} from "@mui/material/styles";
+import {styled} from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import {Card, Divider} from "@mui/material";
+import {Card} from "@mui/material";
 
 const IconWrapperStyle = styled('div')(({theme}) => ({
     margin: 'auto',
@@ -11,7 +11,6 @@ const IconWrapperStyle = styled('div')(({theme}) => ({
     width: '50px',
     height: '50px',
     justifyContent: 'center',
-    // marginBottom: theme.spacing(3)
 }));
 
 const StatusCard = ({title, count, color, bgColor, icon, ...other}) => {
@@ -32,7 +31,12 @@ const StatusCard = ({title, count, color, bgColor, icon, ...other}) => {
                     {icon}
                 </IconWrapperStyle>
 
-                <Typography variant="h3" style={{fontWeight: 700, lineHeight: 1.5, fontSize: '2.5rem', fontFamily: 'sans-serif'}}>{count}</Typography>
+                <Typography variant="h3" style={{
+                    fontWeight: 700,
+                    lineHeight: 1.5,
+                    fontSize: '2.5rem',
+                    fontFamily: 'sans-serif'
+                }}>{count}</Typography>
 
                 <Typography variant="subtitle2" sx={{opacity: 0.72}}>
                     {title}

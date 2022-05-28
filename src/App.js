@@ -5,14 +5,14 @@ import Visualisation from "./theme/Visualisation";
 import Header from "./theme/header";
 
 const App = () => {
-    const theme = useTheme();
+        const theme = useTheme();
 
-    return (
+        return (
             <StyledEngineProvider injectFirst>
                 <MUIThemeProvider theme={theme}>
                     <CssBaseline/>
                     <Header/>
-                    <Visualisation />
+                    <Visualisation/>
                 </MUIThemeProvider>
             </StyledEngineProvider>
         );

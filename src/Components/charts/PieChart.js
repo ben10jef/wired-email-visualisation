@@ -2,7 +2,7 @@ import ReactApexChart from "react-apexcharts";
 import {merge} from "lodash";
 import BaseOptionChart from "../../BaseOptionChart";
 import numeral from "numeral";
-import {styled, useTheme} from "@mui/material/styles";
+import {styled} from "@mui/material/styles";
 
 const CHART_HEIGHT = 340;
 const LEGEND_HEIGHT = 100;

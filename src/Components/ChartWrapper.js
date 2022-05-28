@@ -8,7 +8,7 @@ const ChartWrapper = ({title, subheader, Component}) => {
             <CardHeader title={title} subheader={subheader} style={{fontSize: '1.4rem', fontWeight: '700'}}/>
             <Divider/>
             <Box sx={{p: 3, pb: 1}} dir="ltr">
-                    {Component}
+                {Component}
             </Box>
         </Card>
     );

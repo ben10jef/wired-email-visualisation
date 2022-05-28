@@ -47,9 +47,9 @@ const Header = () => {
                                     display: {xs: 'block', md: 'none'},
                                 }}
                             >
-                                    <MenuItem key={'dashboard'}>
-                                        <Typography textAlign="center">Dashboard</Typography>
-                                    </MenuItem>
+                                <MenuItem key={'dashboard'}>
+                                    <Typography textAlign="center">Dashboard</Typography>
+                                </MenuItem>
                             </Menu>
                         </Box>
                         <AdbIcon sx={{display: {xs: 'flex', md: 'none'}, mr: 1}}/>
