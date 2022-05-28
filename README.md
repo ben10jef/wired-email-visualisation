@@ -27,7 +27,7 @@
 ```
 npm start
  ```
-Server will open on browser http://localhost:3000/ .
+Server will open on browser [http://localhost:3000/](http://localhost:3000/).
 We are ready to go ...
  
  
@@ -42,13 +42,13 @@ We are ready to go ...
 | **Email engagement by hour of day** | Performance metrics on an hourly basis |
 | **User table**  |  List of Users with their curresponding details    |
 
-If i had more time, I could:
+If I had more time, I could:
 * give a visual idea of the best time to send emails accross various business.   
-* implemenent login flow
+* implement login flow
 * have added more Javascript codes (Focused more on visualisation)
-* implemenent redux
-* Dive deeper on the data and create more visualisation
+* implement redux
+* dive deeper on the data and create more visualisation
 * have added user Interaction
 * added more react hooks 
 
-Had to take more time on to visualing the data and creating them
+Had to take more time on to visualizing the data and creating them
